@@ -1,16 +1,16 @@
 def roman_to_decimal(roman):
     result=0
-    letras=["I","V","X","L","C","D","M"]
-    for a in range(len(roman)):
-        if roman == "IV" :
-            return 4
-        elif roman == "V":
-            return 5
-        elif roman == "IX" :
-            return 9
-        elif roman == "X":
-            return 10
-        elif roman == "XV":
-            return 15
+    romano_valor = {"I" : 1, "V" : 5, "X" : 10, "L" : 50, "C" : 100, "D" : 500, "M" : 1000}
 
-    return len(roman)
+    primer_valor = romano_valor[roman[0]]
+
+    
+
+    for i in range(1, len(roman)):
+        if romano_valor[roman[i]] < romano_valor[roman[i-1]]:
+            result -= romano_valor[roman[i]]
+        else:
+            result += romano_valor[roman[i]]
+
+
+    return result
