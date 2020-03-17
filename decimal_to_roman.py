@@ -6,10 +6,10 @@ class DecimalToRoman():
 
 
 	def decimal_to_roman(self, number):
-		if (number > 10):
+		if (number >= 10):
 			self.response += 'X'
 			return self.decimal_to_roman(number - 10)
-		elif (number > 5):
+		elif (number >= 5):
 			if number == 9:
 				self.response += 'IX'
 				return self.decimal_to_roman(number - 9)
@@ -25,9 +25,3 @@ class DecimalToRoman():
 				return self.decimal_to_roman(number - 1)
 		elif number <= 0:
 			return self.response
-
-
-
-
-
-

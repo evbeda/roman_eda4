@@ -4,7 +4,7 @@ from decimal_to_roman import DecimalToRoman
 
 class TestDecimalToRoman(unittest.TestCase):
 
-    def __init__(self):
+    def setUp(self):
         self.objeto = DecimalToRoman()
 
     def test_decimal_to_roman_0(self):
