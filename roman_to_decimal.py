@@ -4,7 +4,7 @@ def roman_to_decimal(roman):
 
     primer_valor = romano_valor[roman[0]]
 
-    
+        
 
     for i in range(1, len(roman)):
         if romano_valor[roman[i]] < romano_valor[roman[i-1]]:
