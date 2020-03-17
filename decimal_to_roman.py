@@ -1,2 +1,16 @@
+response = ''
+
 def decimal_to_roman(number):
-	return 'I'
+	if (number > 10):
+		response += 'X'
+		decimal_to_roman(number - 10)
+	if (number > 5):
+
+	if number <= 0:
+		return ''
+
+
+
+
+
+
