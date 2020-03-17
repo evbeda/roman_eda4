@@ -38,12 +38,22 @@ class TestRomanToDecimal(unittest.TestCase):
     def test_roman_to_decimal_15(self):
         result = roman_to_decimal("XV")
         self.assertEqual(result, 15)
-    
-
 
     def test_roman_to_decimal_19(self):
         result = roman_to_decimal("XIX")
         self.assertEqual(result, 19)
+
+    def test_roman_to_decimal_28(self):
+        result = roman_to_decimal("XXVIII")
+        self.assertEqual(result, 28)
+
+    def test_roman_to_decimal_3191(self):
+        result = roman_to_decimal("MMMCXCI")
+        self.assertEqual(result, 3191)
+
+    def test_roman_to_decimal_94(self):
+        result = roman_to_decimal("XCIV")
+        self.assertEqual(result, 94)
 
 if __name__ == "__main__":
     unittest.main()
